@@ -13,7 +13,7 @@ export function Person(birthdate) {
   this.day = birthdate.getDate();
   this.age = this.today.getTime() - this.birthdate.getTime();
   this.lifeExpEarthYears = 78.2; // Life expectancy, in years, United States (2018)
-  this.lifeExp = 1000*60*60*24*365.25*this.lifeExpectancyEarthYears; // 78.2 earth years converted to milliseconds
+  this.lifeExp = 1000*60*60*24*365.25*this.lifeExpEarthYears; // 78.2 earth years converted to milliseconds
 }
 
 Person.prototype.earthAge = function() {
@@ -23,11 +23,18 @@ Person.prototype.earthAge = function() {
 
 Person.prototype.earthLifeLeft = function() {
   return this.lifeExpEarthYears - this.earthAge();
-}
+};
 
 Person.prototype.mercuryAge = function() {
   const mercuryYear = 1000*60*60*24*87.97;
   return this.age/mercuryYear;
+};
+
+Person.prototype.mercuryLifeLeft = function() {
+  const mercuryYear = 1000*60*60*24*87.97;
+  console.log(this.lifeExp);
+  console.log(this.age);
+  return (this.lifeExp - this.age)/mercuryYear;
 };
 
 Person.prototype.venusAge = function() {

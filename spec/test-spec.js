@@ -43,7 +43,7 @@ describe('The "Person" object and its associated prototypes', function() {
 
   });
 
-  it('should calculcate the life expectancy the person has left to live in earth years', function() {
+  it('should calculcate the life expectancy the person has left to live in Earth years', function() {
 
         expect(Me.earthLifeLeft()).toBeCloseTo(44.1, 1);
 
@@ -52,6 +52,12 @@ describe('The "Person" object and its associated prototypes', function() {
   it('should test the mercuryAge() prototype gives the age in Mercury years of that person', function() {
     // For this and the following tests, comparing the output from person.js methods to the values given by entering my birthdate at https://theplanets.org/age-on-planets/. The first argument of the toBeCloseTo matcher is the years given for each planet with the Sept. 3 1984 birthdate, the second is the precision given for each answer by the site.
     expect(Me.mercuryAge()).toBeCloseTo(141.5, 1);
+
+  });
+
+  it('should calculcate the life expectancy the person has left to live in Mercury years', function() {
+
+    expect(Me.mercuryLifeLeft()).toBeCloseTo(183.18,1);
 
   });
 
