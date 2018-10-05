@@ -4,7 +4,7 @@
 
 ## Description
 
-This page, given a birthdate supplied by the user, will calculate that person's age and life expectancy on any planet in the solar system.
+This page, given a birthdate supplied by the user, will calculate that person's age and life expectancy on any planet in the solar system. Submitted for Epicodus code review 10/5/2018.
 
 ## Screenshots
 
