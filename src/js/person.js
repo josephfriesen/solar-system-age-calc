@@ -5,13 +5,16 @@ The Person object will instantiate with the user's birthdate and will have a col
 */
 
 export function Person(birthdate) {
+  const d = new Date();
+  this.today = d;
   this.birthdate = birthdate;
   this.age = this.earthAge();
-  this.today = new Date();
 }
 
 Person.prototype.earthAge = function() {
-  return 0;
+  const msAge = this.today.getTime() - this.birthdate.getTime();
+  const year = 1000*60*60*24*365.25;
+  return (msAge/year).toFixed(3);
 };
 
 Person.prototype.mercuryAge = function() {

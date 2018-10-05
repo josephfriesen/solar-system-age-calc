@@ -4,10 +4,13 @@ import { RandomDate } from './../src/js/random-date.js';
 describe('The "Person" object and its associated prototypes', function() {
 
   const today = new Date();
+  const Me = new Person(new Date(1984, 8, 3));
+  let RandomBirth;
+  let SomeDude;
 
   beforeEach(function() {
-    const SomeDude = new Person(new RandomDate());
-    console.log(SomeDude);
+    RandomBirth = new RandomDate();
+    SomeDude = new Person(RandomBirth.date);
   });
 
   // comment this first test out after, just checking that I understand how Date objects work.
@@ -22,7 +25,8 @@ describe('The "Person" object and its associated prototypes', function() {
 
   it('should show that, given a specific birthdate, the Person object has correctly recorded that date as a value of the key "Person.birthdate"', function() {
 
-    expect(SomeDude.birthdate).toEqual(today);
+    console.log(SomeDude);
+    expect(SomeDude.birthdate).toEqual(RandomBirth.date);
 
   });
 
@@ -36,7 +40,7 @@ describe('The "Person" object and its associated prototypes', function() {
 
   it('should show that the person object has correctly calculated their (earth) age', function() {
 
-    expect(SomeDude.age).toEqual(null);
+    expect(Math.floor(Me.age)).toEqual(34);
 
   });
 
