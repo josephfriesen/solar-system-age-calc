@@ -12,12 +12,18 @@ export function Person(birthdate) {
   this.month = birthdate.getMonth();
   this.day = birthdate.getDate();
   this.age = this.today.getTime() - this.birthdate.getTime();
+  this.lifeExpEarthYears = 78.2; // Life expectancy, in years, United States (2018)
+  this.lifeExp = 1000*60*60*24*365.25*this.lifeExpectancyEarthYears; // 78.2 earth years converted to milliseconds
 }
 
 Person.prototype.earthAge = function() {
   const earthYear = 1000*60*60*24*365.25;
   return (this.age/earthYear).toFixed(3);
 };
+
+Person.prototype.earthLifeLeft = function() {
+  return this.lifeExpEarthYears - this.earthAge();
+}
 
 Person.prototype.mercuryAge = function() {
   const mercuryYear = 1000*60*60*24*87.97;
