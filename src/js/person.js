@@ -8,7 +8,7 @@ export function Person(birthdate) {
   this.birthdate = birthdate;
   this.age = this.earthAge();
   this.today = new Date();
-};
+}
 
 Person.prototype.earthAge = function() {
   return 0;
