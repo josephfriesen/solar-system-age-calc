@@ -8,6 +8,9 @@ export function Person(birthdate) {
   const d = new Date();
   this.today = d;
   this.birthdate = birthdate;
+  this.year = birthdate.getFullYear();
+  this.month = birthdate.getMonth();
+  this.day = birthdate.getDate();
   this.age = this.earthAge();
 }
 

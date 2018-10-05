@@ -32,14 +32,17 @@ describe('The "Person" object and its associated prototypes', function() {
 
   it('should show that the birth year, month and day have all been read from the birthdate object and been recorded under the appropriate key', function() {
 
-    expect(SomeDude.year).toEqual(null);
-    expect(SomeDude.month).toEqual(null);
-    expect(SomeDude.day).toEqual(null);
+    expect(Me.year).toEqual(1984);
+    expect(Me.month).toEqual(8);
+    expect(Me.day).toEqual(3);
 
   });
 
   it('should show that the person object has correctly calculated their (earth) age', function() {
 
+    console.log(SomeDude);
+    console.log(SomeDude.earthAge());
+    console.log(SomeDude.age);
     expect(Math.floor(Me.age)).toEqual(34);
 
   });
