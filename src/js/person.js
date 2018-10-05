@@ -25,25 +25,31 @@ Person.prototype.mercuryAge = function() {
 };
 
 Person.prototype.venusAge = function() {
-  return 0;
+  const venusYear = 1000*60*60*24*224.7
+  return this.age/venusYear;
 };
 
 Person.prototype.marsAge = function() {
-  return 0;
+  const marsYear = 1000*60*60*24*686.97
+  return this.age/marsYear;
 };
 
 Person.prototype.jupiterAge = function() {
-  return 0;
+  const jupiterYear = 1000*60*60*24*4332.59;
+  return this.age/jupiterYear;
 };
 
 Person.prototype.saturnAge = function() {
-  return 0;
+  const saturnYear = 1000*60*60*24*10759.22
+  return this.age/saturnYear;
 };
 
 Person.prototype.neptuneAge = function() {
-  return 0;
+  const neptuneYear = 1000*60*60*24*60190.03;
+  return this.age/neptuneYear;
 };
 
 Person.prototype.uranusAge = function() {
-  return 0;
+  const uranusYear = 1000*60*60*24*30687.15;
+  return this.age/uranusYear;
 };

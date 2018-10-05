@@ -44,44 +44,44 @@ describe('The "Person" object and its associated prototypes', function() {
   });
 
   it('should test the mercuryAge() prototype gives the age in Mercury years of that person', function() {
-    // For this and the following tests, comparing the output from person.js methods to the values given by entering my birthdate at https://theplanets.org/age-on-planets/
+    // For this and the following tests, comparing the output from person.js methods to the values given by entering my birthdate at https://theplanets.org/age-on-planets/. The first argument of the toBeCloseTo matcher is the years given for each planet with the Sept. 3 1984 birthdate, the second is the precision given for each answer by the site.
     expect(Me.mercuryAge()).toBeCloseTo(141.5, 1);
 
   });
 
   it('should test the venusAge() prototype for accuracy', function() {
 
-    expect(Me.venusAge()).toBeCloseTo(null);
+    expect(Me.venusAge()).toBeCloseTo(55.4, 1);
 
   });
 
   it('should test the marsAge() prototype for accuracy', function() {
 
-    expect(Me.marsAge()).toBeCloseTo(null);
+    expect(Me.marsAge()).toBeCloseTo(18.1, 1);
 
   });
 
   it('should test the jupiterAge() prototype for accuracy', function() {
 
-    expect(Me.jupiterAge()).toBeCloseTo(null);
+    expect(Me.jupiterAge()).toBeCloseTo(2.87, 2);
 
   });
 
   it('should test the saturnAge() prototype for accuracy', function() {
-
-    expect(Me.saturnAge()).toBeCloseTo(null);
+    // theplanets.org gives my age in Saturn years as 1.15 but there must be some rounding error in that figure, as I have checked and figured this one every which way I can and gotten my Saturn age as 1.157 years. Hmm?
+    expect(Me.saturnAge()).toBeCloseTo(1.157, 2);
 
   });
 
   it('should test the neptuneAge() prototype for accuracy', function() {
 
-    expect(Me.neptuneAge()).toBeCloseTo(null);
+    expect(Me.neptuneAge()).toBeCloseTo(0.2, 1);
 
   });
 
   it('should test the uranusAge() prototype for accuracy', function() {
 
-    expect(Me.uranusAge()).toBeCloseTo(null);
+    expect(Me.uranusAge()).toBeCloseTo(0.4, 1);
 
   });
 
