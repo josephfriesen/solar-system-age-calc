@@ -25,7 +25,6 @@ describe('The "Person" object and its associated prototypes', function() {
 
   it('should show that, given a specific birthdate, the Person object has correctly recorded that date as a value of the key "Person.birthdate"', function() {
 
-    console.log(SomeDude);
     expect(SomeDude.birthdate).toEqual(RandomBirth.date);
 
   });
@@ -40,22 +39,49 @@ describe('The "Person" object and its associated prototypes', function() {
 
   it('should show that the person object has correctly calculated their (earth) age', function() {
 
-    console.log(SomeDude);
-    console.log(SomeDude.earthAge());
-    console.log(SomeDude.age);
-    expect(Math.floor(Me.age)).toEqual(34);
+    expect(Math.floor(Me.earthAge())).toEqual(34);
 
   });
 
-  it('should test that the method for each planet is scaling the age of that person correctly', function() {
+  it('should test the mercuryAge() prototype gives the age in Mercury years of that person', function() {
+    // For this and the following tests, comparing the output from person.js methods to the values given by entering my birthdate at https://theplanets.org/age-on-planets/
+    expect(Me.mercuryAge()).toBeCloseTo(141.5, 1);
 
-    expect(SomeDude.mercuryAge()).toEqual(null);
-    expect(SomeDude.venusAge()).toEqual(null);
-    expect(SomeDude.marsAge()).toEqual(null);
-    expect(SomeDude.jupiterAge()).toEqual(null);
-    expect(SomeDude.saturnAge()).toEqual(null);
-    expect(SomeDude.neptuneAge()).toEqual(null);
-    expect(SomeDude.uranusAge()).toEqual(null);
+  });
+
+  it('should test the venusAge() prototype for accuracy', function() {
+
+    expect(Me.venusAge()).toBeCloseTo(null);
+
+  });
+
+  it('should test the marsAge() prototype for accuracy', function() {
+
+    expect(Me.marsAge()).toBeCloseTo(null);
+
+  });
+
+  it('should test the jupiterAge() prototype for accuracy', function() {
+
+    expect(Me.jupiterAge()).toBeCloseTo(null);
+
+  });
+
+  it('should test the saturnAge() prototype for accuracy', function() {
+
+    expect(Me.saturnAge()).toBeCloseTo(null);
+
+  });
+
+  it('should test the neptuneAge() prototype for accuracy', function() {
+
+    expect(Me.neptuneAge()).toBeCloseTo(null);
+
+  });
+
+  it('should test the uranusAge() prototype for accuracy', function() {
+
+    expect(Me.uranusAge()).toBeCloseTo(null);
 
   });
 

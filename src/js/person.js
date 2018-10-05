@@ -11,17 +11,17 @@ export function Person(birthdate) {
   this.year = birthdate.getFullYear();
   this.month = birthdate.getMonth();
   this.day = birthdate.getDate();
-  this.age = this.earthAge();
+  this.age = this.today.getTime() - this.birthdate.getTime();
 }
 
 Person.prototype.earthAge = function() {
-  const msAge = this.today.getTime() - this.birthdate.getTime();
-  const year = 1000*60*60*24*365.25;
-  return (msAge/year).toFixed(3);
+  const earthYear = 1000*60*60*24*365.25;
+  return (this.age/earthYear).toFixed(3);
 };
 
 Person.prototype.mercuryAge = function() {
-  return 0;
+  const mercuryYear = 1000*60*60*24*87.97;
+  return this.age/mercuryYear;
 };
 
 Person.prototype.venusAge = function() {
