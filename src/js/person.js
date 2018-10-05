@@ -18,7 +18,7 @@ export function Person(birthdate) {
 
 Person.prototype.earthAge = function() {
   const earthYear = 1000*60*60*24*365.25;
-  return (this.age/earthYear).toFixed(3);
+  return (this.age/earthYear);
 };
 
 Person.prototype.earthLifeLeft = function() {
@@ -32,8 +32,6 @@ Person.prototype.mercuryAge = function() {
 
 Person.prototype.mercuryLifeLeft = function() {
   const mercuryYear = 1000*60*60*24*87.97;
-  console.log(this.lifeExp);
-  console.log(this.age);
   return (this.lifeExp - this.age)/mercuryYear;
 };
 
@@ -42,9 +40,19 @@ Person.prototype.venusAge = function() {
   return this.age/venusYear;
 };
 
+Person.prototype.venusLifeLeft = function() {
+  const venusYear = 1000*60*60*24*224.7
+  return (this.lifeExp - this.age)/venusYear;
+};
+
 Person.prototype.marsAge = function() {
   const marsYear = 1000*60*60*24*686.97
   return this.age/marsYear;
+};
+
+Person.prototype.marsLifeLeft = function() {
+  const marsYear = 1000*60*60*24*686.97
+  return (this.lifeExp - this.age)/marsYear;
 };
 
 Person.prototype.jupiterAge = function() {
@@ -52,9 +60,19 @@ Person.prototype.jupiterAge = function() {
   return this.age/jupiterYear;
 };
 
+Person.prototype.jupiterLifeLeft = function() {
+  const jupiterYear = 1000*60*60*24*4332.59;
+  return (this.lifeExp - this.age)/jupiterYear;
+};
+
 Person.prototype.saturnAge = function() {
   const saturnYear = 1000*60*60*24*10759.22
   return this.age/saturnYear;
+};
+
+Person.prototype.saturnLifeLeft = function() {
+  const saturnYear = 1000*60*60*24*10759.22
+  return (this.lifeExp - this.age)/saturnYear;
 };
 
 Person.prototype.neptuneAge = function() {
@@ -62,7 +80,17 @@ Person.prototype.neptuneAge = function() {
   return this.age/neptuneYear;
 };
 
+Person.prototype.neptuneLifeLeft = function() {
+  const neptuneYear = 1000*60*60*24*60190.03;
+  return (this.lifeExp - this.age)/neptuneYear;
+};
+
 Person.prototype.uranusAge = function() {
   const uranusYear = 1000*60*60*24*30687.15;
   return this.age/uranusYear;
+};
+
+Person.prototype.uranusLifeLeft = function() {
+  const uranusYear = 1000*60*60*24*30687.15;
+  return (this.lifeExp - this.age)/uranusYear;
 };

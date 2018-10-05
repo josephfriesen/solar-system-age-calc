@@ -67,9 +67,21 @@ describe('The "Person" object and its associated prototypes', function() {
 
   });
 
+  it('should calculate life expectancy in Venus years', function() {
+
+    expect(Me.venusLifeLeft()).toBeCloseTo(71.7,1);
+
+  });
+
   it('should test the marsAge() prototype for accuracy', function() {
 
     expect(Me.marsAge()).toBeCloseTo(18.1, 1);
+
+  });
+
+  it('should calculate life expectancy in Mars years', function() {
+
+    expect(Me.marsLifeLeft()).toBeCloseTo(23.45, 1);
 
   });
 
@@ -79,9 +91,21 @@ describe('The "Person" object and its associated prototypes', function() {
 
   });
 
+  it('should calculate life expectancy in Jupiter years', function() {
+
+    expect(Me.jupiterLifeLeft()).toBeCloseTo(3.7, 1);
+
+  });
+
   it('should test the saturnAge() prototype for accuracy', function() {
     // theplanets.org gives my age in Saturn years as 1.15 but there must be some rounding error in that figure, as I have checked and figured this one every which way I can and gotten my Saturn age as 1.157 years. Hmm?
     expect(Me.saturnAge()).toBeCloseTo(1.157, 2);
+
+  });
+
+  it('should calculate life expectancy in Saturn years', function() {
+    // theplanets.org gives my age in Saturn years as 1.15 but there must be some rounding error in that figure, as I have checked and figured this one every which way I can and gotten my Saturn age as 1.157 years. Hmm?
+    expect(Me.saturnLifeLeft()).toBeCloseTo(1.50, 1);
 
   });
 
@@ -91,9 +115,21 @@ describe('The "Person" object and its associated prototypes', function() {
 
   });
 
+  it('should calculate life expectancy in Neptune years', function() {
+
+    expect(Me.neptuneLifeLeft()).toBeCloseTo(0.2677, 1);
+
+  });
+
   it('should test the uranusAge() prototype for accuracy', function() {
 
     expect(Me.uranusAge()).toBeCloseTo(0.4, 1);
+
+  });
+
+  it('should calculate life expectancy in Uranus years', function() {
+
+    expect(Me.uranusLifeLeft()).toBeCloseTo(0.525, 1);
 
   });
 
